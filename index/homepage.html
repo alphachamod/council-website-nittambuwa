@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Column Layout with Header</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Top-bar-->
+  <div class="row" id="top-bar">
+    <div class="col-md-9 d-flex align-items-center justify-content-left">
+      <p>This is top header</p>
+    </div>
+    <div class="col-md-3 d-flex align-items-center justify-content-center">
+      <p>This is top header</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="row" id="header">
+    <!-- Main Logo -->
+    <div class="col-md-2 col-4 d-flex align-items-center justify-content-end">
+      <img id="logo" src="../assests/logo-trans.png">
+    </div>
+    <!-- Main Title -->
+    <div class="col-md-3 col-4 d-flex align-items-center" id="header-title">
+      <h1>Nittambuwa Metropolitan Council</h1>
+    </div>
+    <!-- Menu -->
+    <div class="col-md-4 d-flex align-items-center">
+      <nav id="menu">
+        <ul class="nav justify-content-center align-items-center"> <!--Justify the navigation links -->
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">NEWS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">JOBS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Search bar -->
+    <div class="col-md-2 col-12 d-flex align-items-center ">
+      <form class="form-inline my-2 my-lg-0" id="search-desk">
+        <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="search-bar-button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    <!--  Profile -->
+    <div class="col-md-1 col-4 d-flex align-items-center">
+      <img id="profile-img" src="../assests/login.png">
+    </div>
+  </div>
+
+  <!--  MOBILE Search bar -->
+  <div class="row" id="mobile-search">
+    <div class="col-md-12 col-12 d-flex align-items-center justify-content-center" id="search-bar-wrapper">
+      <form class="form-inline my-2 my-lg-0" id="search-bar-wrapper">
+        <input id="mobile-search-bar" class="form-control mr-sm-2" type="search" placeholder="Search"
+          aria-label="Search">
+        <button id="mobile-search-bar-button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="row" id="navi">
+    <!-- Navbar   ONLY IN MOBILE  -->
+    <nav class="col-12 navbar navbar-expand-lg navbar-dark bg-dark" id="mobile-navbar">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NEWS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JOBS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!----------------------------------------------------------------------------->
+  <!---------------------------------- Content  --------------------------------->
+  <!----------------------------------------------------------------------------->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <!-- First half of the container -->
+        <div class="row">
+          <div class="col-12" id="hello-column">
+            <!-- Content for the first third -->
+            <h2>Hello.</h2>
+            <p id="welcome-note">Welcome to the council webite of Nittambuwa Metropolitan Council</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-center">
+            <!-- Content for the second third -->
+            <div class="banner">
+              <!-- Banner inside the left column -->
+              <p>MyNMC - your all-in-one online gateway to seamless services,
+                designed to make yourlife easier and more convenient. With MyDudley , you can access a wide range of
+                services anytime, anywhere, all from the comfort of your home or on the go.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="../assests/mynmc-logo.png" id="mynmc-logo"> 
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-end">
+                  <button id="register-button" type="button" class="btn btn-primary">REGISTER</button>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-end">
+                  <button id="login-button" type="button" class="btn btn-primary">LOGIN</button>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- Content for the third third -->
+            LEFT 3
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <!-- Second half of the container -->
+        RIGHT
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
