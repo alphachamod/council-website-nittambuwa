@@ -3,6 +3,10 @@
 
 @media (max-width: 767.98px) {
 
+    body{
+        overflow-x: hidden;
+
+    }
     #header{
         background-color: #170066;
         height: 130px;
@@ -27,6 +31,28 @@
         display: none;
     }
 
+    /* .container{
+        margin: 0;
+        padding-right: 70px;
+        background-size: cover;
+    }
+
+    .banner {
+        width: 90%;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        background-color: #CEEFFF;
+        border: 1px solid;
+
+        border-radius: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        margin: 0;
+      } */
+ 
 }
  /* ------------------Desktop View CSS------------------ */
 
@@ -60,9 +86,6 @@ body{
     font-weight: 400;
     font-style: normal;
   }
-
-
-  
   #top-bar{
     background-color: #131418;
     height: 22px;
@@ -190,8 +213,7 @@ li:hover {
   }
 
   .container {
-    margin: 10px;
-    padding: 10px;
+    margin: 30px;
     background-size: cover;
     border: none; 
   }
@@ -208,6 +230,7 @@ li:hover {
     border: 1px solid black;
     color: black;
     width: 150px;
+    margin-top: 5px;
   }
 
   #login-button{
@@ -217,9 +240,17 @@ li:hover {
     color: white;
     background-color: #2B5EB3;
     width: 150px;
+    margin-top: 5px;
   }
 
   #mynmc-logo{
-    width: 39%;
+    width: 35%;
     max-height: 100%;
+  }
+
+  #bannertop-img{
+    max-width: 30%;
+    height: 60px;
+    margin-right: 25px;
+    margin-top: -50px;
   }
