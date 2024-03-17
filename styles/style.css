@@ -1,33 +1,38 @@
-
- /* ------------------Mobile View CSS------------------ */
+/* ------------------Mobile View CSS------------------ */
 
 @media (max-width: 767.98px) {
 
-    body{
+    body {
         overflow-x: hidden;
 
     }
-    #header{
+
+    #header {
         background-color: #170066;
         height: 130px;
         color: white;
         padding-top: 20px;
     }
 
-    #header-title h1{
-        font-size: 24px; /* Reduced font size for mobile */
+    #header-title h1 {
+        font-size: 24px;
+        /* Reduced font size for mobile */
     }
+
     /* Hide the top-bar on mobile screens */
     #top-bar {
         display: none;
     }
+
     #menu {
         display: none;
     }
-    #search-desk{
+
+    #search-desk {
         display: none;
     }
-    #profile-img{
+
+    #profile-img {
         display: none;
     }
 
@@ -52,41 +57,44 @@
         padding-right: 20px;
         margin: 0;
       } */
- 
+
 }
- /* ------------------Desktop View CSS------------------ */
+
+/* ------------------Desktop View CSS------------------ */
 
 @media (min-width: 768px) {
-    
+
     #mobile-navbar {
         display: none;
-    } 
-    #search-bar-wrapper{
+    }
+
+    #search-bar-wrapper {
         display: none;
     }
-    
+
     #header-title h1 {
-        font-size: 28px; 
-        margin: 0; 
+        font-size: 28px;
+        margin: 0;
     }
-  }
+}
 
 /* ----------------------------------------------------- */
 /* -------------------REGULAR CSS----------------------- */
 /* ---------------------HEAEDER------------------------- */
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
-   
+
 }
 
 .abril-fatface-regular {
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  #top-bar{
+}
+
+#top-bar {
     background-color: #131418;
     height: 22px;
     color: white;
@@ -95,10 +103,10 @@ body{
     font-size: 9px;
     text-transform: uppercase;
     font-weight: 400;
-    
+
 }
 
-#header{
+#header {
     background-color: #170066;
     height: 140px;
     color: white;
@@ -107,7 +115,8 @@ body{
 }
 
 #logo {
-    max-width: 100%; /* Set maximum width to 100% of the container */
+    max-width: 100%;
+    /* Set maximum width to 100% of the container */
     height: auto;
     max-height: 70%;
 }
@@ -119,27 +128,28 @@ body{
     font-style: normal;
 }
 
-#profile-img{
-    max-width: 100%; 
+#profile-img {
+    max-width: 100%;
     height: 30px;
 }
 
-.nav-item{
+.nav-item {
     border-radius: 20px;
 }
+
 li {
     color: #fff;
     text-decoration: none;
     transition-duration: 0.5s;
-    
+
 }
-    
+
 li a {
     color: #fff;
 }
-  
+
 li:hover {
-      
+
     cursor: pointer;
     color: black;
     font-size: large;
@@ -147,7 +157,7 @@ li:hover {
     border-radius: 20px;
 }
 
-#search-bar{
+#search-bar {
     font-size: x-small;
     font-style: italic;
     border: none;
@@ -156,19 +166,20 @@ li:hover {
     width: 150px;
 }
 
-#search-bar-button{
+#search-bar-button {
     border-radius: 60px;
-    border-color: white;    
+    border-color: white;
     color: white;
     font-size: smaller;
 
-    
+
 }
-#search-bar-wrapper{
+
+#search-bar-wrapper {
     background-color: #170066;
 }
 
-#mobile-search-bar{
+#mobile-search-bar {
     font-size: x-small;
     font-style: italic;
     border: none;
@@ -178,9 +189,9 @@ li:hover {
     margin-right: 10px;
 }
 
-#mobile-search-bar-button{
+#mobile-search-bar-button {
     border-radius: 60px;
-    border-color: white;    
+    border-color: white;
     color: white;
     font-size: smaller;
 }
@@ -189,7 +200,7 @@ li:hover {
 /* -------------------REGULAR CSS----------------------- */
 /* ---------------------CONTENT------------------------- */
 
-#hello-column h2{
+#hello-column h2 {
     font-family: "Jost", sans-serif;
     font-weight: 400;
     font-size: 70px;
@@ -210,30 +221,30 @@ li:hover {
     padding-bottom: 20px;
     padding-right: 20px;
     margin: 0;
-  }
+}
 
-  .container {
+.container {
     margin: 30px;
     background-size: cover;
-    border: none; 
-  }
+    border: none;
+}
 
-  #welcome-note{
+#welcome-note {
     font-family: "Jost", sans-serif;
     margin-left: 14px;
     margin-top: -20px;
-  }
+}
 
-  #register-button{
-    background-color: transparent; 
+#register-button {
+    background-color: transparent;
     border-radius: 30px;
     border: 1px solid black;
     color: black;
     width: 150px;
     margin-top: 5px;
-  }
+}
 
-  #login-button{
+#login-button {
 
     border-radius: 30px;
     border: none;
@@ -241,16 +252,42 @@ li:hover {
     background-color: #2B5EB3;
     width: 150px;
     margin-top: 5px;
-  }
+}
 
-  #mynmc-logo{
+#mynmc-logo {
     width: 35%;
     max-height: 100%;
-  }
+}
 
-  #bannertop-img{
+#bannertop-img {
     max-width: 30%;
     height: 60px;
     margin-right: 25px;
     margin-top: -50px;
-  }
+}
+
+/*------------------------ SERVICE CARD SECTION --------------------- */
+#main-card {
+    margin-top: 15px;
+    background-size: cover;
+    padding-left: 2%;
+    font-size: 11;
+    line-height: 1;
+
+
+}
+
+#service-card-icon {
+    width: 45px;
+    height: auto;
+}
+
+
+/* Single Service Card  */
+#service-card {
+    height: 100px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    margin-top: 7px;
+    margin-left: 7px;
+}
