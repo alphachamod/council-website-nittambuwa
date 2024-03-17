@@ -313,7 +313,7 @@ li:hover {
     padding: 0 24px;
     color: white;
     font-weight: bold;
-    z-index: 200; 
+    z-index: 200;
 
 }
 
@@ -325,12 +325,13 @@ li:hover {
 }
 
 .news-container ul li {
-    white-space: nowrap; /* This wraps the content to hte container  */
+    white-space: nowrap;
+    /* This wraps the content to hte container  */
     padding: 5px 20px;
     color: white;
     position: relative;
     font-weight: 500;
-   
+
 
 }
 
@@ -347,7 +348,7 @@ li:hover {
 } */
 
 .news-container ul li::after {
-    content:"";
+    content: "";
     width: 1px;
     height: 100%;
     background: #b8b8b8;
@@ -370,4 +371,3 @@ li:hover {
 
     }
 }
-
