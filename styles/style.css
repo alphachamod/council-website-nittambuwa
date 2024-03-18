@@ -148,7 +148,7 @@ li a {
     color: #fff;
 }
 
-li:hover {
+#menu li:hover {
 
     cursor: pointer;
     color: black;
