@@ -200,6 +200,83 @@ li a {
 /* -------------------REGULAR CSS----------------------- */
 /* ---------------------CONTENT------------------------- */
 
+/*------------------------------------- BREAKING NEWS --------------------- */
+.news-container {
+    height: 35px;
+    font-family: "Jost", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+    background-color: #000433;
+}
+
+.news-container .title {
+    position: absolute;
+    background: #df2020;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 200;
+
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 35s infinite linear;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    /* This wraps the content to hte container  */
+    padding: 5px 20px;
+    color: white;
+    position: relative;
+    font-weight: 500;
+
+
+}
+
+/* .news-container ul li::after {
+    content:"";
+    width: 1.5%;
+    height: 20%;
+    border-radius: 60px;
+    background: #EC1E45;
+    position: absolute;
+    top: 40%;
+    right: 0;
+
+} */
+
+.news-container ul li::after {
+    content: "";
+    width: 1px;
+    height: 50%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    top: 25%;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(20%);
+    }
+
+    to {
+        transform: translateX(-100%);
+
+    }
+}
+
 #hello-column h2 {
     font-family: "Jost", sans-serif;
     font-weight: 400;
@@ -295,79 +372,11 @@ li a {
 /*-------------------------------------  NEWS SLIDER --------------------- */
 
 
-
-/*------------------------------------- BREAKING NEWS --------------------- */
-.news-container {
-    height: 35px;
-    font-family: "Jost", sans-serif;
-    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+#main-right-column{
     background-color: #000433;
-}
-
-.news-container .title {
-    position: absolute;
-    background: #df2020;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    color: white;
-    font-weight: bold;
-    z-index: 200;
-
-}
-
-.news-container ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    animation: scroll 35s infinite linear;
-}
-
-.news-container ul li {
-    white-space: nowrap;
-    /* This wraps the content to hte container  */
-    padding: 5px 20px;
-    color: white;
-    position: relative;
-    font-weight: 500;
+    background-size: cover;
+    margin-top: 15px;
+    padding: 2%;
 
 
-}
-
-/* .news-container ul li::after {
-    content:"";
-    width: 1.5%;
-    height: 20%;
-    border-radius: 60px;
-    background: #EC1E45;
-    position: absolute;
-    top: 40%;
-    right: 0;
-
-} */
-
-.news-container ul li::after {
-    content: "";
-    width: 1px;
-    height: 100%;
-    background: #b8b8b8;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.news-container ul li:last-child::after {
-    display: none;
-}
-
-@keyframes scroll {
-    from {
-        transform: translateX(20%);
-    }
-
-    to {
-        transform: translateX(-100%);
-
-    }
 }
