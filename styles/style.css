@@ -111,6 +111,22 @@ body {
 
 }
 
+#social-media-icons{
+    width: auto;
+    height: 14px; 
+    margin-top: -17px;
+    transition: 0.3s;
+}
+
+#social-media-icons:hover{
+    cursor: url('../assests/tap.png'), auto;
+    transform: scale(2.0);
+    transition: 0.3s;
+}
+#social-bar{
+    padding-right: 60px;
+}
+
 #header {
     background-color: #170066;
     height: 140px;
