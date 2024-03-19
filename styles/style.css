@@ -445,6 +445,28 @@ button:hover {
     height: 900px;
 }
 
+/*-------------------------------------  Right Column --------------------- */
+#main-right-column {
+    /* background-color: #df2020; */
+    background-size: cover;
+    margin-top: 15px;
+    margin-left: -55px;
+}
+
+#bot-button{
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #1C1917;
+    color: white;
+    position: relative;
+    margin-top: -140px;
+    margin-left: 170px;
+
+}
 /*-------------------------------------  NEWS SLIDER --------------------- */
 #news-slider{
     background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);  
@@ -456,14 +478,7 @@ button:hover {
     box-sizing: border-box; /* Include padding and border in the width */
 }
 
-/*-------------------------------------  Right Column --------------------- */
-#main-right-column {
-    /* background-color: #df2020; */
-    background-size: cover;
-    margin-top: 15px;
-    margin-left: -55px;
 
-}
 
 /*-------------------------------------  FOOTER ------------------------------------------- */
 /*-------------------------------------  FOOTER ------------------------------------------- */
