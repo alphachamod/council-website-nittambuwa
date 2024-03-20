@@ -111,19 +111,20 @@ body {
 
 }
 
-#social-media-icons{
+#social-media-icons {
     width: auto;
-    height: 14px; 
+    height: 14px;
     margin-top: -17px;
     transition: 0.3s;
 }
 
-#social-media-icons:hover{
+#social-media-icons:hover {
     cursor: url('../assests/tap.png'), auto;
     transform: scale(2.0);
     transition: 0.3s;
 }
-#social-bar{
+
+#social-bar {
     padding-right: 60px;
 }
 
@@ -155,7 +156,7 @@ body {
     height: 30px;
 }
 
-#profile-img:hover{
+#profile-img:hover {
     cursor: url('../assests/tap.png'), auto;
 }
 
@@ -416,7 +417,8 @@ button:hover {
     overflow: hidden;
     font-size: 17px;
     font-weight: 500;
-    transition: transform 0.4s, background 0.4s, color 0.1s, box-shadow 0.4s; /* Here when the cursor is away from the card the a smooth transition is applied, font color is set to 0.1 to decrease the time only to color property  */
+    transition: transform 0.4s, background 0.4s, color 0.1s, box-shadow 0.4s;
+    /* Here when the cursor is away from the card the a smooth transition is applied, font color is set to 0.1 to decrease the time only to color property  */
 }
 
 #service-card:hover {
@@ -430,26 +432,26 @@ button:hover {
 }
 
 
-  
-  #service-card:after {
+
+#service-card:after {
     content: "";
     background: #BFDBFE;
     display: block;
     position: absolute;
     padding-top: 300%;
     padding-left: 350%;
-    margin-left: -20px!important;
+    margin-left: -20px !important;
     margin-top: -120%;
     opacity: 0;
     transition: all 0.8s
-  }
-  
-  #service-card:active:after {
+}
+
+#service-card:active:after {
     padding: 0;
     margin: 0;
     opacity: 1;
     transition: 0s
-  }
+}
 
 #card-text {
     margin-left: -20px;
@@ -469,7 +471,7 @@ button:hover {
     margin-left: -55px;
 }
 
-#bot-button{
+#bot-button {
     width: 200px;
     height: 60px;
     border: none;
@@ -483,30 +485,129 @@ button:hover {
     margin-left: 170px;
 
 }
+
 /*-------------------------------------  NEWS SLIDER --------------------- */
-#news-slider{
-    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);  
+
+#news-slider {
     height: 508px;
-    width: 100%;
-    color: white;
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    box-sizing: border-box; /* Include padding and border in the width */
+    /* Set the height of the main row */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Arrange children vertically */
+    background: rgb(39, 0, 169);
+    background: linear-gradient(90deg, rgba(39, 0, 169, 1) 0%, rgba(18, 74, 189, 1) 100%);
+    color: #fff;
 }
 
+#news-maintitle {
+    flex: 10;
+    /* Set the news-maintitle to occupy 10% of the height */
+    display: flex;
 
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 40px;
+}
+
+#news-content {
+    flex: 90;
+    /* Set the news-content to occupy 80% of the height */
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: "Jost", sans-serif;
+}
+
+#sub-heading {
+    padding-right: 30px;
+    padding-left: 30px;
+    /* text-align: center; */
+}
+
+#sub-content {
+    padding-top: 20px;
+    margin-right: 20%;
+    padding-left: 30px;
+    text-align: justify;
+}
+
+#news-type-img {
+    width: auto;
+    height: 90%;
+    align-items: center;
+    justify-content: end;
+    opacity: 0.1;
+    position: absolute;
+    padding-left: 67%;
+}
+
+#read-more-btn {
+    width: 150px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: transparent;
+    color: white;
+    position: relative;
+    margin-left: 25px;
+    transition: color 400ms;
+    text-transform: uppercase;
+
+
+}
+
+/* #read-more-btn:hover {
+    transform: rotate(2deg);
+    transition: 0.4s;
+    border: none;
+    background: rgb(0,5,63);
+    background: linear-gradient(90deg, rgba(0,5,63,1) 0%, rgba(67,80,250,1) 100%);
+    color: white;
+    position: relative;
+    cursor: url('../assests/tap.png'), auto;
+
+
+} */
+
+
+#read-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: royalblue;
+    z-index: -1;
+    transition: transform 400ms ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+#read-more-btn:hover::before {
+   transform: scaleX(1);
+}
+
+#read-more-btn:hover {
+    color: #fff;
+}
 
 /*-------------------------------------  FOOTER ------------------------------------------- */
 /*-------------------------------------  FOOTER ------------------------------------------- */
 
-#footer{
+#footer {
     background-color: #131418;
     height: 200px;
     width: 100%;
     color: white;
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    box-sizing: border-box; /* Include padding and border in the width */
+    margin: 0;
+    /* Reset margin */
+    padding: 0;
+    /* Reset padding */
+    box-sizing: border-box;
+    /* Include padding and border in the width */
 }
-
-
