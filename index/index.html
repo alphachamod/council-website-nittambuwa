@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyNMC</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Top-bar-->
+  <div class="row" id="top-bar">
+    <div class="col-md-8 d-flex align-items-center justify-content-left">
+      <p>Enhancing Urban Living: Nittambuwa Metropolitan Council</p>
+    </div>
+    <div class="col-md-4 d-flex align-items-center justify-content-end" id="social-bar">
+      <div class="col-md-1 d-flex align-items-center">
+        <img src="../assests/icons8-facebook-24.png" id="social-media-icons">
+      </div>
+      <div class="col-md-1 d-flex align-items-center ">
+        <img src="../assests/icons8-instagram-24.png" id="social-media-icons">
+      </div>
+      <div class="col-md-1 d-flex align-items-center ">
+        <img src="../assests/icons8-tiktok-24.png" id="social-media-icons">
+      </div>
+      <div class="col-md-1 d-flex align-items-center ">
+        <img src="../assests/icons8-twitter-24.png" id="social-media-icons">
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="row" id="header">
+    <!-- Main Logo -->
+    <div class="col-md-2 col-4 d-flex align-items-center justify-content-end">
+      <img id="logo" src="../assests/logo-trans.png">
+    </div>
+    <!-- Main Title -->
+    <div class="col-md-3 col-4 d-flex align-items-center" id="header-title">
+      <h1>Nittambuwa Metropolitan Council</h1>
+    </div>
+    <!-- Menu -->
+    <div class="col-md-4 d-flex align-items-center">
+      <nav id="menu">
+        <ul class="nav justify-content-center align-items-center"> <!--Justify the navigation links -->
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">NEWS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">JOBS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Search bar -->
+    <div class="col-md-2 col-12 d-flex align-items-center ">
+      <form class="form-inline my-2 my-lg-0" id="search-desk">
+        <input id="search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="search-bar-button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    <!--  Profile -->
+    <div class="col-md-1 col-4 d-flex align-items-center">
+      <img id="profile-img" src="../assests/login.png">
+    </div>
+  </div>
+
+  <!--  MOBILE Search bar -->
+  <div class="row" id="mobile-search">
+    <div class="col-md-12 col-12 d-flex align-items-center justify-content-center" id="search-bar-wrapper">
+      <form class="form-inline my-2 my-lg-0" id="search-bar-wrapper">
+        <input id="mobile-search-bar" class="form-control mr-sm-2" type="search" placeholder="Search"
+          aria-label="Search">
+        <button id="mobile-search-bar-button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="row" id="navi">
+    <!-- Navbar   ONLY IN MOBILE  -->
+    <nav class="col-12 navbar navbar-expand-lg navbar-dark bg-dark" id="mobile-navbar">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SERVICES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NEWS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JOBS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!----------------------------------------------------------------------------->
+  <!---------------------------------- Content  --------------------------------->
+  <!----------------------------------------------------------------------------->
+
+  <!------------ NEWS LINE  ------------------->
+
+  <div class="news-container">
+    <div class="title">
+      Breaking News
+    </div>
+    <ul id="news-bar">
+      <li>
+        Nittambuwa Council set to unveil its climate change action plan
+      </li>
+
+      <li>
+        Brierley Hill roads set for resurfacing as part of revamp
+      </li>
+
+      <li>
+        Amblecote electrical fire causes power cut in Stourbridge
+      </li>
+      <li>
+        Reducing paper use and enhancing biodiversity among Nittambuwa's climate action plan
+      </li>
+
+      <li>
+        Preferred site revealed for Eton College in Nittambuwa
+      </li>
+
+      <li>
+        Aston Villa vs Legia Warsaw: New video of violence released
+      </li>
+    </ul>
+  </div>
+
+  <!-------- SERVICES CARDS  ------------->
+
+  <div class="container-fluid"> <!--Fluid is used to occupy the whole screen-->
+    <div class="row">
+      <div class="col-md-8"> <!-----This is the Main Left Column----->
+        <div class="row">
+          <div class="col-12" id="hello-column">
+            <h2>Hello.</h2>
+            <p id="welcome-note">Welcome to the Official Webite of Nittambuwa Metropolitan Council</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-end" id="hello-column">
+            <img src="../assests/park.png" id="bannertop-img">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="banner">
+              <!-- Banner inside the left column -->
+              <p>MyNMC - your all-in-one online gateway to seamless services,
+                designed to make yourlife easier and more convenient. With MyNMC , you can access a wide range of
+                services anytime, anywhere, all from the comfort of your home or on the go making the life easier.</p>
+              <div class="row">
+                <div class="col-md-8">
+                  <img src="../assests/mynmc-logo.png" id="mynmc-logo">
+                </div>
+                <div class="col-md-2 d-flex align-items-center justify-content-end" id="butt">
+                  <button type="button" class="reg">REGISTER</button>
+                </div>
+                <div class="col-md-2 d-flex align-items-center justify-content-end" id="butt">
+                  <button type="button" class="log">LOGIN</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="main-card"> <!-- MAIN CARD CONTENTS SERVICES  -------->
+
+          <!--Parent 1st ROW-->
+
+          <div class="col-md-12 d-flex align-items-center justify-content-end" id="service-card-container">
+            <!-- 1st ROW-->
+            <div class="col-md-3 d-flex align-items-center justify-content-center" id="service-card"> <!--Single Card-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/house.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                <span>HOUSING</span>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/recycle-bin.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                BINS & RECYLING
+              </div>
+            </div>
+            <div class="col-md-5 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/healthcare.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                SOCIAL CARE & HEALTH
+              </div>
+            </div>
+          </div>
+
+          <!--Parent 2nd ROW-->
+
+          <div class="col-md-12 d-flex align-items-center justify-content-end" id="service-card-container">
+            <div class="col-md-4 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/education.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                EDUCATION & SCHOOL
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/office-building.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                PLANNING & BUILDING
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/taxes.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                COUNCIL TAX
+              </div>
+            </div>
+          </div>
+
+          <!--Parent 3rd ROW-->
+
+          <div class="col-md-12 d-flex align-items-center justify-content-end" id="service-card-container">
+            <div class="col-md-5 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/parking-area.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                PARKING & TRANSPORTAION
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/benefits.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                BENEFITS & WELFARE
+              </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/save-the-planet.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                ECO
+              </div>
+            </div>
+          </div>
+
+          <!--Parent 3rd ROW-->
+
+          <div class="col-md-12 d-flex align-items-center justify-content-end" id="service-card-container">
+            <div class="col-md-4 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/approved (1).png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                REGISTRATION SERVICES
+              </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/extracurricular-activities (1).png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                LEISURE EVENTS
+              </div>
+            </div>
+            <div class="col-md-5 d-flex align-items-center justify-content-center" id="service-card">
+              <!--Single Child-->
+              <div class="col-md-5 d-flex align-items-center justify-content-center"> <!--ICON -->
+                <img src="../assests/foster-family.png" id="service-card-icon">
+              </div>
+              <div class="col-md-7 d-flex align-items-center justify-content-center" id="card-text"> <!--TITLE -->
+                CHILDREN & YOUNG PEOPLE
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MAIN CARD CONTENTS SERVICES  ------END--------->
+      </div>
+      <div class="col-md-4 d-flex align-items-center justify-content-center" id="main-right-column">
+        <!-----This is the Main Right Column----->
+        <!-- Bot Column -->
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <div class="row">
+            <img src="../assests/bot-group.png" id="bot-background">
+            <button type="button" id="bot-button">START</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!--------------------------- NEWS SLIDER----------------------->
+  <div class="row" id="news-slider">
+    <div class="col-md-12d-flex align-items-center" id="news-maintitle">
+      LATEST NEWS
+    </div>
+    <div class="col-md-12" id="news-content">
+      <img src="../assests/law.png" id="news-type-img">
+      <h5 id="sub-heading">Man accused of causing deaths of Nittambuwa friends Liberty and Ben pleads not guilty</h5>
+      <p id="sub-content">A TRIAL date has been set for a 55-year-old man accused of causing the deaths of two teenagers
+        by dangerous
+        driving after he pled not guilty. Dhiya Al Maamoury appeared at Nittambuwa Crown Court today (Tuesday March
+        19) after Liberty
+        Charris, aged 16 and Ben Corfield, aged 19, died in an incident in Nittambuwa in 2022. He pleaded not guilty to
+        two
+        counts of
+        causing death by dangerous driving and a trial date was set for February 17, 2025. He also pleaded not guilty to
+        two counts
+        of causing serious injury by dangerous driving after a man and woman in their 20s were also injured and are
+        continuing with
+        their recovery. Liberty Charris, aged 16, and 19-year-old Ben Corfield, both from Nittambuwa, died after a blue
+        Nissan Skyline
+        hit a number of pedestrians who were gathered on the A457 Polhena Road near to the junction with Crystal Drive
+        at around
+        11.30pm on November 20. Maamoury, from Hobs Moat Road, in Nittambuwa, was granted unconditional bail until the
+        trial next year
+        at Nittambuwa Crown Court.</p>
+        <button type="button" id="read-more-btn"> READ MORE </button>
+
+    </div>
+
+  </div>
+  </div>
+
+  <!--------------------------- FOOTER -------------------------->
+  
+  <!--------------------------- FOOTER -------------------------->
+
+  <div class="row" id="footer">
+    <div class="col-md-12">
+      Footer
+    </div>
+  </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
