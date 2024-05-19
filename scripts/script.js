@@ -1,7 +1,5 @@
 // Slider Action Arrows
 
-const slider = document.querySelector('.slider');
-
 function activate(e) {
     const items = document.querySelectorAll('.item');
     e.target.matches('.next') && slider.append(items[0])
@@ -10,19 +8,33 @@ function activate(e) {
 
 document.addEventListener('click', activate, false);
 
-// Search Null Validation
 
-const searchInput = document.getElementById('searchInput');
-const searchButton = document.getElementById('searchButton');
+// Login
 
-searchInput.addEventListener('keyup', () => {
-    const value = searchInput.value.trim(); // Trim whitespace
-    if (!value) {
-        searchInput.classList.add('is-invalid'); // Add Bootstrap error class
-        searchButton.disabled = true; // Disable button
-    } else {
-        searchInput.classList.remove('is-invalid');
-        searchButton.disabled = false;
-    }
-});
+
+
+// Register
+
+let passwordInput = document.getElementById('passwordInput');
+let repasswordInput = document.getElementById('repasswordInput');
+
+let RegisterUser = evt => {
+  evt.preventDefault();
+  
+  if (passwordInput.value !== repasswordInput.value) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
+    .then((credentials) => {
+      console.log(credentials);
+      alert("User Registered Successfully");
+    })  
+    .catch((error) => {
+      alert(error.message);
+      console.log(error.code);
+      console.log(error.message);
+    });
+};
 

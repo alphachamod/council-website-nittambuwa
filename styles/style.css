@@ -174,13 +174,13 @@ body {
 li {
     color: #fff;
     text-decoration: none;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 
 }
 
 li a {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #menu li:hover {
@@ -892,4 +892,98 @@ ul.social-footer2 li a {
     transition: all 250ms ease-in-out 0s;
     text-decoration: none;
 
+}
+
+/* ----------------------Login---------------------- */
+
+
+#login-form{
+    /* background-color: #000433; */
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 600px;
+    background-image: url("../assests/login-abs.jpg");
+    background-size: cover;
+
+}
+
+.login-card{
+  
+    background-color:rgba(0, 0, 0, 0.2);
+    padding: 70px;
+    width: 500px;
+    border-radius: 20px;
+ 
+}
+
+#login-text{
+    font-family: "Jost", sans-serif;
+    padding-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
+
+#login-btn{
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+    margin-bottom: 5px;
+    border: none;
+  
+}
+#login-lbl{
+    color: white;
+    font-family: "Jost", sans-serif;
+}
+
+#subreg-btn{
+  background-color: #04275B;
+  border: none;
+  width: 100%;
+}
+
+/* ------------------------------------Register----------------------------- */
+
+#reg-form{
+    /* background-color: #000433; */
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 800px;
+    background-image: url("../assests/login-abs.jpg");
+    background-size: cover;
+
+}
+
+
+.reg-card{
+  
+    background-color:rgba(0, 0, 0, 0.2);
+    padding: 70px;
+    width: 700px;
+    border-radius: 20px;
+ 
+}
+
+#reg-text{
+    font-family: "Jost", sans-serif;
+    padding-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
+
+#reg-btn{
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+    margin-bottom: 5px;
+    border: none;
+  
+}
+
+#sublogin-btn{
+  background-color: #04275B;
+  border: none;
+  width: 100%;
 }
