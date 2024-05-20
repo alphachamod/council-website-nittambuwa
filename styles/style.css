@@ -1298,10 +1298,11 @@ ul.social-footer2 li a {
 
 /* ----------------------------Social ------------------------------------- */
 
-.social-container{
-  height: 2000px;
-  font-family: "Jost", sans-serif;
+.social-container {
+    height: 2000px;
+    font-family: "Jost", sans-serif;
 }
+
 .social-hero {
     background: linear-gradient(rgba(37, 37, 37, 0.8), rgba(101, 101, 101, 0.8)), url('https://www.healthwatch.co.uk/sites/healthwatch.co.uk/files/2023-07/istock-1206536806_1_0.jpg');
     background-size: cover;
@@ -1312,10 +1313,11 @@ ul.social-footer2 li a {
     margin-top: -50px;
 }
 
-.card-wrapper-social{
+.card-wrapper-social {
     padding-left: 200px;
     padding-right: 200px;
 }
+
 .social-hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -1326,8 +1328,8 @@ ul.social-footer2 li a {
     font-size: 1.2rem;
     margin-bottom: 40px;
     color: white;
-    padding-left: 200px ;
-    padding-right: 200px ;
+    padding-left: 200px;
+    padding-right: 200px;
 
 }
 
@@ -1437,12 +1439,12 @@ ul.social-footer2 li a {
     color: #0056b3;
 }
 
-#social-img{
+#social-img {
     border-radius: 6px;
     margin-bottom: 20px;
 }
 
-.social-key-services h3{
+.social-key-services h3 {
     padding-top: 40px;
 
     padding-top: 30px;
@@ -1451,18 +1453,19 @@ ul.social-footer2 li a {
 
 }
 
-.social-health-resources{
+.social-health-resources {
     text-align: center;
-    
+
 }
-.social-health-resources li a{
+
+.social-health-resources li a {
     color: white;
     text-decoration: none;
     text-align: center;
     align-items: center;
 }
 
-.list-group-item{
+.list-group-item {
     background-color: #5000da;
     margin: 5px;
 }
@@ -1489,8 +1492,8 @@ ul.social-footer2 li a {
     font-size: 1.2rem;
     margin-bottom: 40px;
     color: white;
-    padding-left: 200px ;
-    padding-right: 200px ;
+    padding-left: 200px;
+    padding-right: 200px;
 
 }
 
@@ -1551,4 +1554,129 @@ ul.social-footer2 li a {
 
 .education-card a {
     color: #000433;
+}
+
+/* -----------------------Planning and Building------------------------- */
+
+
+/* ------------------------Jobs------------------ */
+
+
+.jobs-hero {
+    background: linear-gradient(rgba(37, 37, 37, 0.8), rgba(101, 101, 101, 0.8)), url('https://images.pexels.com/photos/13569603/pexels-photo-13569603.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #333;
+
+}
+
+.jobs-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.jobs-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+
+}
+
+.jb-container {
+    margin-top: -1px;
+    padding-top: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 700px;
+    /* padding-bottom: 80px; */
+}
+
+.card-jb {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.075);
+}
+
+.card-job {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-job:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-job .card-title {
+    color: #007bff;
+}
+
+.card-job .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.card-job .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Contact Us */
+
+.ct-container{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.ct-hero {
+    background: linear-gradient(rgba(37, 37, 37, 0.8), rgba(101, 101, 101, 0.8)), url('https://images.websitebuilderexpert.com/wp-content/uploads/2023/02/13045442/Contact-Us-Page-Examples.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #333;
+
+}
+
+.ct-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.ct-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+
+}
+
+.ct-container {
+    margin-top: -3px;
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    
+    height: 300px;
+
+}
+
+#submit-btn{
+    width: 100%;
+}
+
+#details li {
+    background-color: transparent;
+    color: black
+}
+
+#details a{ 
+    color: black;
+    text-decoration: none;
 }
