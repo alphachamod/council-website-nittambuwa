@@ -455,6 +455,8 @@ button:hover {
     overflow: hidden;
     font-size: 17px;
     font-weight: 500;
+    text-decoration: none;
+    color: black;
     transition: transform 0.4s, background 0.4s, color 0.1s, box-shadow 0.4s;
     /* Here when the cursor is away from the card the a smooth transition is applied, font color is set to 0.1 to decrease the time only to color property  */
 }
@@ -897,7 +899,7 @@ ul.social-footer2 li a {
 /* ----------------------Login---------------------- */
 
 
-#login-form{
+#login-form {
     /* background-color: #000433; */
     padding-left: 0px;
     padding-right: 0px;
@@ -907,16 +909,16 @@ ul.social-footer2 li a {
 
 }
 
-.login-card{
-  
-    background-color:rgba(0, 0, 0, 0.2);
+.login-card {
+
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 70px;
     width: 500px;
     border-radius: 20px;
- 
+
 }
 
-#login-text{
+#login-text {
     font-family: "Jost", sans-serif;
     padding-bottom: 20px;
     text-align: center;
@@ -925,27 +927,28 @@ ul.social-footer2 li a {
     font-weight: 600;
 }
 
-#login-btn{
+#login-btn {
     padding: 10px 30px 10px 30px;
     width: 100%;
     margin-bottom: 5px;
     border: none;
-  
+
 }
-#login-lbl{
+
+#login-lbl {
     color: white;
     font-family: "Jost", sans-serif;
 }
 
-#subreg-btn{
-  background-color: #04275B;
-  border: none;
-  width: 100%;
+#subreg-btn {
+    background-color: #04275B;
+    border: none;
+    width: 100%;
 }
 
 /* ------------------------------------Register----------------------------- */
 
-#reg-form{
+#reg-form {
     /* background-color: #000433; */
     padding-left: 0px;
     padding-right: 0px;
@@ -956,16 +959,16 @@ ul.social-footer2 li a {
 }
 
 
-.reg-card{
-  
-    background-color:rgba(0, 0, 0, 0.2);
+.reg-card {
+
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 70px;
     width: 700px;
     border-radius: 20px;
- 
+
 }
 
-#reg-text{
+#reg-text {
     font-family: "Jost", sans-serif;
     padding-bottom: 20px;
     text-align: center;
@@ -974,16 +977,314 @@ ul.social-footer2 li a {
     font-weight: 600;
 }
 
-#reg-btn{
+#reg-btn {
     padding: 10px 30px 10px 30px;
     width: 100%;
     margin-bottom: 5px;
     border: none;
-  
+
 }
 
-#sublogin-btn{
-  background-color: #04275B;
-  border: none;
-  width: 100%;
+#sublogin-btn {
+    background-color: #04275B;
+    border: none;
+    width: 100%;
+}
+
+/* --------------------------------------------HOUSING------------------------------- */
+#main-content-housing{
+    height: 1700px;
+}
+#main-header-housing {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+    
+}
+
+#main-header-housing a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#nav-list-housing {
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item-housing {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+#hero-section-housing {
+    background: #f4f4f4;
+    padding: 20px 0;
+    border-bottom: #77aaff 3px solid;
+}
+
+#hero-title-housing {
+    margin: 0;
+    color: #333;
+}
+
+#content-section-housing {
+    padding: 20px 0;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 200px; /* Set the height of the card image */
+    object-fit: cover; /* Ensure the image covers the entire area of the card */
+}
+
+#additional-info-section {
+    background-color: #fff; /* Background color for the additional information section */
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: #77aaff 3px solid;
+}
+#additional-info-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#additional-info-section p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+#housing-enquiry{
+    padding-top: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-image: url("https://img.freepik.com/premium-vector/abstract-pattern-background-with-futuristic-modern-style-concept_7505-2436.jpg");
+    padding-bottom: 60px ;
+    font-family: "Jost", sans-serif;
+}
+
+/* -----------------------------------------Events---------------------------------------- */
+
+.events-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-size: 36px; /* Larger font size */
+    font-family: "Jost", sans-serif;
+    background: #f4f4f4;
+    padding: 20px 0;
+    border-bottom: #77aaff 3px solid;
+}
+
+.event-list {
+    font-family: "Jost", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 900px;
+}
+
+.event {
+    font-family: "Jost", sans-serif;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+}
+
+.event img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.event-details {
+    font-family: "Jost", sans-serif;
+    flex-grow: 1;
+}
+
+.event h2 {
+    font-family: "Jost", sans-serif;
+    margin-top: 0;
+}
+
+.see-more {
+    /* display: inline-block; */
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    float: right;
+    transition: background-color 0.3s ease;
+    margin-right: 100px;
+    margin-top: -100px;
+}
+
+.see-more:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* -------------------Bins and Reclying-------------------- */
+
+
+.recycling-banner {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: -50px;
+    border: none;
+    border-radius: 0%;
+    height: 200px;
+    padding-top: 60px;
+    background-image: url("../assests/bins.png");
+}
+
+.recycling-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 200px;
+    height: 1100px;
+}
+
+.recycling-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Jost", sans-serif;
+}
+
+.recycling-card h3 {
+    margin-top: 0;
+}
+
+.recycling-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.recycling-card li {
+   color: black;
+}
+
+.recycling-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recycling-card label {
+    margin-bottom: 5px;
+}
+
+
+
+.recycling-card input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.recycling-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(33,48,160);
+    background: linear-gradient(90deg, rgba(33,48,160,1) 0%, rgba(67,80,250,1) 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+
+}
+
+.recycling-btn:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-shadow: #131418;
+    transform: scale(1.1);
+
+}
+
+.recycle-links a{
+    color: #000433;
+}
+
+.bin-types li{
+    color: black;
+}
+
+.hero-title {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bin-type{
+    /* overflow: auto; */
+    width: 97%;
+    border: 3px black;
+}
+
+#enquiry{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1C1917;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    width: 100%;
+    height: 70px;
+    padding-top: 20px;
+
+}
+
+#enquiry:hover {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-shadow: #131418;
+    transform: scale(1.03);
+
 }

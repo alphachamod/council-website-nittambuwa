@@ -74,7 +74,7 @@
         </div>
         <!--  Profile -->
         <div class="col-md-1 col-4 d-flex align-items-center">
-            <a href="./index/dashboard.html"><img id="profile-img" src="../assests/login.png"></a> 
+            <a href="./index/dashboard.html"><img id="profile-img" src="../assests/login.png"></a>
         </div>
     </div>
 
@@ -102,7 +102,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../index.html">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">QUICK PAY</a>
@@ -120,9 +120,7 @@
             </div>
         </nav>
     </div>
-    <!----------------------------------------------------------------------------->
-    <!---------------------------------- Content  --------------------------------->
-    <!----------------------------------------------------------------------------->
+
 
     <!------------ NEWS LINE  ------------------->
 
@@ -155,51 +153,186 @@
             </li>
         </ul>
     </div>
+    <!----------------------------------------------------------------------------->
+    <!---------------------------------- Content  --------------------------------->
+    <!----------------------------------------------------------------------------->
 
-    <!-- ----------------------------------------------------PAGE CONTENT-------------------------------------------------------------------- -->
-    <h1>User Dashboard</h1>
-    <div id="userInfo">
-        <!-- User information will be displayed here -->
-    </div>
-    <button type="button" class="btn btn-danger" id="logoutBtn" style="float: right;">Logout</button>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          let isLoggedIn = sessionStorage.getItem('isLoggedIn');
-    
-          if (!isLoggedIn) {
-            window.location.href = "login.html";
-          } else {
-            const userData = JSON.parse(sessionStorage.getItem('userData'));
-    
-            if (userData) {
-              document.getElementById('firstName').innerText = userData.firstName;
-              document.getElementById('lastName').innerText = userData.lastName;
-              document.getElementById('email').innerText = userData.email;
-              document.getElementById('address1').innerText = userData.address1;
-              document.getElementById('address2').innerText = userData.address2;
-              document.getElementById('postcode').innerText = userData.postcode;
-            }
-          }
-        });
-    
-        document.getElementById('logoutBtn').addEventListener('click', () => {
-          sessionStorage.clear();
-          window.location.href = "login.html";
-        });
-      </script>
-    </head>
-    <body>
-      <div>
-        <p>First Name: <span id="firstName"></span></p>
-        <p>Last Name: <span id="lastName"></span></p>
-        <p>Email: <span id="email"></span></p>
-        <p>Address 1: <span id="address1"></span></p>
-        <p>Address 2: <span id="address2"></span></p>
-        <p>Postcode: <span id="postcode"></span></p>
-      </div>
+    <main id="main-content-housing">
+        <section id="hero-section-housing">
+            <div class="container" id="hero-container-housing">
+                <h2 id="hero-title-housing">Housing Services</h2>
+                <p id="hero-description-housing">Welcome to the Housing section of NMC Council website. Here you will
+                    find information on housing options, support services, and how we can assist you with NMC housing
+                    needs.</p>
+            </div>
+        </section>
+
+        <section id="content-section-housing">
+            <div class="container" id="content-container-housing">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" id="housing-options-card">
+                            <img src="https://import.cdn.thinkific.com/466856/courses/1416437/z9YYd2XT8imYzr9EIgsK_SrHsgOptions_CourseImage_760x420.jpg"
+                                class="card-img-top" alt="Housing Options Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Housing Options</h5>
+                                <p class="card-text">Explore various housing options available in our council.</p>
+                                <a href="affordable-housing.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" id="support-services-card">
+                            <img src="https://www.hamiltoninternationalestates.com/admin/uploads/faqs/1579331157.jpg"
+                                class="card-img-top" alt="Support Services Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Support Services</h5>
+                                <p class="card-text">Find support services to assist you with housing-related needs.</p>
+                                <a href="rental-assistance.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" id="application-forms-card">
+                            <img src="https://cdn.rt.emap.com/wp-content/uploads/sites/4/2023/03/03100654/housing_planning_opener.png"
+                                class="card-img-top" alt="Application Forms Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Application Forms</h5>
+                                <p class="card-text">Download and complete the necessary application forms for housing
+                                    services.</p>
+                                <a href="https://firebasestorage.googleapis.com/v0/b/council-web-ucb.appspot.com/o/h21-application-form-lettings-2019.pdf?alt=media&token=e5e048d0-fc33-4a60-ac46-921387f1b6df"
+                                    class="btn btn-primary" target="_blank">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="additional-info-section">
+            <div class="container">
+                <h2>Additional Information</h2>
+                <p>At NMC Council, we understand that finding suitable housing is crucial for individuals and families.
+                    Alongside our housing options and support services, we provide various resources and assistance to
+                    ensure that everyone in our community has access to safe and affordable housing.</p>
+                <p>Our team of dedicated housing advisors is available to help you navigate the housing landscape,
+                    whether you're looking for rental assistance, affordable housing options, or support with housing
+                    applications. We strive to make the process as smooth as possible for our residents.</p>
+                <p>In addition to housing services, NMC Council offers a range of community programs and initiatives
+                    aimed at enhancing the quality of life for all members of our community. From educational workshops
+                    to recreational activities, we're committed to creating a vibrant and inclusive environment for
+                    everyone.</p>
+                <p>Explore our website to learn more about our housing services, upcoming events, and how we can support
+                    you. If you have any questions or need assistance, don't hesitate to contact us. We're here to help!
+                </p>
+            </div>
+        </section>
+        <section id="housing-enquiry">
+            <div class="container">
+                <h2>SUBMIT A HOUSING ENQUIRY</h2>
+                <p>If you have any questions or inquiries about our housing services, please fill out the form below and
+                    we'll get back to you as soon as possible.</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry-type">Type of Inquiry:</label>
+                        <select class="form-control" id="inquiry-type" name="inquiry-type" required>
+                            <option value="">Select One</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Rental Assistance">Rental Assistance</option>
+                            <option value="Housing Application">Housing Application</option>
+                            <option value="Affordable Housing Programs">Affordable Housing Programs</option>
+                            <option value="Homelessness Support">Homelessness Support</option>
+                            <option value="Property Maintenance">Property Maintenance</option>
+                            <option value="Complaints">Complaints</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+
+    <!----------------------------------------------------------------------------->
+    <!----------------------------------END Content  --------------------------------->
+    <!----------------------------------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getDatabase, get, ref, child } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBfgufdNoDwD0Byn-fRTRI56ndKs8q_yA8",
+            authDomain: "council-web-ucb.firebaseapp.com",
+            projectId: "council-web-ucb",
+            storageBucket: "council-web-ucb.appspot.com",
+            messagingSenderId: "879594454910",
+            appId: "1:879594454910:web:1affea62e03855b98b3d2f",
+            measurementId: "G-RVX3G4M7QX"
+        };
+
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+
+// Reference to the Firebase Realtime Database
+const database = firebase.database();
+
+// Function to handle form submission
+function submitForm() {
+    console.log("Form submission function called.");
+
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const inquiryType = document.getElementById('inquiry-type').value;
+    const message = document.getElementById('message').value;
+
+    // Log form data
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Inquiry Type:", inquiryType);
+    console.log("Message:", message);
+
+    // Save data to Firebase under enquiries/housing
+    const enquiryRef = database.ref('enquiries/housing');
+    enquiryRef.push({
+        name: name,
+        email: email,
+        inquiryType: inquiryType,
+        message: message
+    });
+
+    // Reset the form
+    document.getElementById('contact-form').reset();
+
+    // Display a success message or redirect the user
+    alert('Your inquiry has been submitted!');
+}
+    </script>
+
+
     <!--------------------------- FOOTER -------------------------->
-
     <!--------------------------- FOOTER -------------------------->
 
     <footer id="footer" class="footer-1">
@@ -253,7 +386,7 @@
                         <div class="widget no-box">
                             <h5 class="widget-title">Get Started<span></span></h5>
                             <p>Get access to council news to your hand.</p>
-                            <a class="btn-newsletter" href="#" target="_blank">Subscribe to Newsletter</a>
+                            <a class="btn-newsletter" href="www.youtube.com" target="_blank">Subscribe to Newsletter</a>
                         </div>
                     </div>
 
@@ -301,7 +434,7 @@
 
 
 
-    <script src="../scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
