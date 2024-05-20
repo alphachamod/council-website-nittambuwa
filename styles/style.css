@@ -992,16 +992,17 @@ ul.social-footer2 li a {
 }
 
 /* --------------------------------------------HOUSING------------------------------- */
-#main-content-housing{
+#main-content-housing {
     height: 1700px;
 }
+
 #main-header-housing {
     background: #333;
     color: #fff;
     padding-top: 30px;
     min-height: 70px;
     border-bottom: #77aaff 3px solid;
-    
+
 }
 
 #main-header-housing a {
@@ -1041,21 +1042,26 @@ ul.social-footer2 li a {
 }
 
 .card-img-top {
-    height: 200px; /* Set the height of the card image */
-    object-fit: cover; /* Ensure the image covers the entire area of the card */
+    height: 200px;
+    /* Set the height of the card image */
+    object-fit: cover;
+    /* Ensure the image covers the entire area of the card */
 }
 
 #additional-info-section {
-    background-color: #fff; /* Background color for the additional information section */
+    background-color: #fff;
+    /* Background color for the additional information section */
     padding: 40px 0;
     margin-top: 40px;
     border-top: #77aaff 3px solid;
 }
+
 #additional-info-section h2 {
     color: #333;
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 #additional-info-section p {
     color: #555;
     font-size: 16px;
@@ -1065,12 +1071,12 @@ ul.social-footer2 li a {
 
 
 
-#housing-enquiry{
+#housing-enquiry {
     padding-top: 80px;
     padding-left: 200px;
     padding-right: 200px;
     background-image: url("https://img.freepik.com/premium-vector/abstract-pattern-background-with-futuristic-modern-style-concept_7505-2436.jpg");
-    padding-bottom: 60px ;
+    padding-bottom: 60px;
     font-family: "Jost", sans-serif;
 }
 
@@ -1081,7 +1087,8 @@ ul.social-footer2 li a {
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
-    font-size: 36px; /* Larger font size */
+    font-size: 36px;
+    /* Larger font size */
     font-family: "Jost", sans-serif;
     background: #f4f4f4;
     padding: 20px 0;
@@ -1195,7 +1202,7 @@ ul.social-footer2 li a {
 }
 
 .recycling-card li {
-   color: black;
+    color: black;
 }
 
 .recycling-card form {
@@ -1219,8 +1226,8 @@ ul.social-footer2 li a {
 .recycling-btn {
     display: inline-block;
     padding: 10px 20px;
-    background: rgb(33,48,160);
-    background: linear-gradient(90deg, rgba(33,48,160,1) 0%, rgba(67,80,250,1) 100%);
+    background: rgb(33, 48, 160);
+    background: linear-gradient(90deg, rgba(33, 48, 160, 1) 0%, rgba(67, 80, 250, 1) 100%);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -1239,11 +1246,11 @@ ul.social-footer2 li a {
 
 }
 
-.recycle-links a{
+.recycle-links a {
     color: #000433;
 }
 
-.bin-types li{
+.bin-types li {
     color: black;
 }
 
@@ -1258,13 +1265,13 @@ ul.social-footer2 li a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.bin-type{
+.bin-type {
     /* overflow: auto; */
     width: 97%;
     border: 3px black;
 }
 
-#enquiry{
+#enquiry {
     display: inline-block;
     padding: 10px 20px;
     background-color: #1C1917;
@@ -1287,4 +1294,261 @@ ul.social-footer2 li a {
     text-shadow: #131418;
     transform: scale(1.03);
 
+}
+
+/* ----------------------------Social ------------------------------------- */
+
+.social-container{
+  height: 2000px;
+  font-family: "Jost", sans-serif;
+}
+.social-hero {
+    background: linear-gradient(rgba(37, 37, 37, 0.8), rgba(101, 101, 101, 0.8)), url('https://www.healthwatch.co.uk/sites/healthwatch.co.uk/files/2023-07/istock-1206536806_1_0.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #333;
+    margin-top: -50px;
+}
+
+.card-wrapper-social{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.social-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.social-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+    padding-left: 200px ;
+    padding-right: 200px ;
+
+}
+
+.social-service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.social-service-card h4 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.social-service-card p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.social-service-card a {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-service-card a:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.social-news-and-events {
+    /* background-color: #f5f5f5; */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-news-and-events h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.social-news-and-events .card {
+    border: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.social-news-and-events .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.social-news-and-events .card-text {
+    color: #666;
+}
+
+.social-news-and-events .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-news-and-events .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.social-contact {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-contact h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.social-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-contact ul li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.social-contact ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-contact ul li a:hover {
+    color: #0056b3;
+}
+
+#social-img{
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.social-key-services h3{
+    padding-top: 40px;
+
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+
+}
+
+.social-health-resources{
+    text-align: center;
+    
+}
+.social-health-resources li a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+}
+
+.list-group-item{
+    background-color: #5000da;
+    margin: 5px;
+}
+
+/* -----------------------------------EDUCATION------------------------- */
+
+.education-hero {
+    background: linear-gradient(rgba(37, 37, 37, 0.8), rgba(101, 101, 101, 0.8)), url('https://cypmhc.org.uk/wp-content/uploads/2021/09/Whole-School-Approach-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #333;
+    margin-top: -50px;
+}
+
+.education-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.education-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+    padding-left: 200px ;
+    padding-right: 200px ;
+
+}
+
+.education-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 200px;
+    height: 1100px;
+    margin-top: 40px;
+}
+
+.education-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Jost", sans-serif;
+}
+
+.education-card h3 {
+    margin-top: 0;
+}
+
+.education-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.education-card li {
+    color: black;
+}
+
+.education-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.education-card label {
+    margin-bottom: 5px;
+}
+
+
+
+.education-card input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.education-card a {
+    color: #000433;
 }
