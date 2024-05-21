@@ -58,4 +58,19 @@ document.getElementById("MainForm").addEventListener("submit", function(event) {
     }
 });
 
+// Drop down for the Building and Planning Documents
+
+
+$(document).ready(function() {
+    $('.dropdown-toggle').on('click', function() {
+      $(this).next('.dropdown-menu').toggleClass('show');
+    });
+
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('.dropdown').length) {
+        $('.dropdown-menu').removeClass('show');
+      }
+    });
+  });
+
 
