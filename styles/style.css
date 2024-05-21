@@ -1927,3 +1927,47 @@ ul.social-footer2 li a {
   .dropdown-toggle:after {
     display: none;
   }
+
+  /* ------------------------Council Tax------------------------ */
+
+  .tax-header {
+    background-color: #007bff;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .tax-content {
+    margin-bottom: 40px;
+  }
+  .tax-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .tax-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  .tax-card-header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+  }
+  .tax-card-body {
+    padding: 20px;
+  }
+  .tax-card-body p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
