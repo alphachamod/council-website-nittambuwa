@@ -59,7 +59,8 @@
             <nav id="menu">
                 <ul class="nav justify-content-center align-items-center"> <!--Justify the navigation links -->
                     <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.gov.uk/pay-council-tax">QUICK PAY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.gov.uk/pay-council-tax">QUICK PAY</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="./events.html">NEWS</a></li>
                     <li class="nav-item"><a class="nav-link" href="./jobs.html">JOBS</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contact-us.html">CONTACT</a></li>
@@ -165,8 +166,8 @@
             council area.
         </p>
     </section>
-    
-    <main class="plan-container" style="padding: 5%; height: 1100px;">
+
+    <main class="plan-container" style="padding: 5%; height: 1200px;">
         <div class="inspection-header">
           <h1 class="display-4">Schedule Inspection</h1>
           <p class="lead">Schedule an inspection for your construction project by filling out the form below.</p>
@@ -177,7 +178,15 @@
           <div class="card inspection-card">
             <div class="card-header inspection-card-header">Inspection Request Form</div>
             <div class="card-body">
-              <form>
+              <form id="inspectionForm">
+                <div class="mb-3">
+                  <label for="requesterName" class="form-label">Requester Name</label>
+                  <input type="text" class="form-control" id="requesterName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="requesterEmail" class="form-label">Requester Email</label>
+                  <input type="email" class="form-control" id="requesterEmail" required>
+                </div>
                 <div class="mb-3">
                   <label for="projectName" class="form-label">Project Name</label>
                   <input type="text" class="form-control" id="projectName" required>
@@ -194,7 +203,6 @@
                     <option value="Framing">Framing</option>
                     <option value="Electrical">Electrical</option>
                     <option value="Plumbing">Plumbing</option>
-                    <!-- Add more options as needed -->
                   </select>
                 </div>
                 <div class="mb-3">
@@ -317,7 +325,119 @@
         </div>
     </footer>
 
-
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getDatabase, set, ref, push } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBfgufdNoDwD0Byn-fRTRI56ndKs8q_yA8",
+            authDomain: "council-web-ucb.firebaseapp.com",
+            projectId: "council-web-ucb",
+            storageBucket: "council-web-ucb.appspot.com",
+            messagingSenderId: "879594454910",
+            appId: "1:879594454910:web:1affea62e03855b98b3d2f",
+            measurementId: "G-RVX3G4M7QX"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+    
+        // Reference form elements
+        let inspectionForm = document.getElementById('inspectionForm');
+        let requesterNameInput = document.getElementById('requesterName');
+        let requesterEmailInput = document.getElementById('requesterEmail');
+        let projectNameInput = document.getElementById('projectName');
+        let projectAddressInput = document.getElementById('projectAddress');
+        let inspectionTypeInput = document.getElementById('inspectionType');
+        let inspectionDateInput = document.getElementById('inspectionDate');
+        let additionalInfoInput = document.getElementById('additionalInfo');
+    
+        function validateForm() {
+          let isValid = true;
+    
+          if (!requesterNameInput.value) {
+            isValid = false;
+            alert("Requester Name is required.");
+          }
+    
+          if (!requesterEmailInput.value) {
+            isValid = false;
+            alert("Requester Email is required.");
+          }
+    
+          if (!projectNameInput.value) {
+            isValid = false;
+            alert("Project Name is required.");
+          }
+    
+          if (!projectAddressInput.value) {
+            isValid = false;
+            alert("Project Address is required.");
+          }
+    
+          if (inspectionTypeInput.value === "") {
+            isValid = false;
+            alert("Please select an Inspection Type.");
+          }
+    
+          if (!inspectionDateInput.value) {
+            isValid = false;
+            alert("Preferred Inspection Date is required.");
+          }
+    
+          return isValid;
+        }
+    
+        let submitInspectionForm = evt => {
+          evt.preventDefault();
+    
+          if (!validateForm()) {
+            return;
+          }
+    
+          const requesterName = requesterNameInput.value;
+          const requesterEmail = requesterEmailInput.value;
+          const projectName = projectNameInput.value;
+          const projectAddress = projectAddressInput.value;
+          const inspectionType = inspectionTypeInput.value;
+          const inspectionDate = inspectionDateInput.value;
+          const additionalInfo = additionalInfoInput.value;
+    
+          // Reference to the inspections node in Firebase
+          const inspectionsRef = ref(db, 'inspections');
+    
+          // Push a new inspection with a unique key
+          const newInspectionRef = push(inspectionsRef);
+    
+          // Construct the inspection object
+          const inspectionData = {
+            requesterName: requesterName,
+            requesterEmail: requesterEmail,
+            projectName: projectName,
+            projectAddress: projectAddress,
+            inspectionType: inspectionType,
+            inspectionDate: inspectionDate,
+            additionalInfo: additionalInfo,
+            // Add more fields as needed
+          };
+    
+          // Save data to Firebase
+          set(newInspectionRef, inspectionData)
+            .then(() => {
+              alert('Your inspection has been scheduled successfully!');
+              inspectionForm.reset();
+            })
+            .catch(error => {
+              console.error('Error scheduling inspection:', error);
+            });
+        };
+    
+        inspectionForm.addEventListener('submit', submitInspectionForm);
+      </script>
 
     <script src="./scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -59,7 +59,8 @@
             <nav id="menu">
                 <ul class="nav justify-content-center align-items-center"> <!--Justify the navigation links -->
                     <li class="nav-item"><a class="nav-link" href="../index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.gov.uk/pay-council-tax">QUICK PAY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.gov.uk/pay-council-tax">QUICK PAY</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="./events.html">NEWS</a></li>
                     <li class="nav-item"><a class="nav-link" href="./jobs.html">JOBS</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contact-us.html">CONTACT</a></li>
@@ -171,7 +172,7 @@
         <div class="card planning-card">
             <div class="card-header planning-card-header">Planning Application Form</div>
             <div class="card-body">
-                <form>
+                <form id="applicationForm" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="applicantName" class="form-label">Applicant Name</label>
@@ -202,7 +203,8 @@
                     </div>
                     <div class="form-check mb-3">
                         <input type="checkbox" class="form-check-input" id="terms" required>
-                        <label class="form-check-label" for="terms">I agree to the <a href="./terms-and-con.html">terms and
+                        <label class="form-check-label" for="terms">I agree to the <a href="./terms-and-con.html">terms
+                                and
                                 conditions</a></label>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit Application</button>
@@ -318,7 +320,129 @@
             </div>
         </div>
     </footer>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getDatabase, set, ref, push } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
 
+        const firebaseConfig = {
+            apiKey: "AIzaSyBfgufdNoDwD0Byn-fRTRI56ndKs8q_yA8",
+            authDomain: "council-web-ucb.firebaseapp.com",
+            projectId: "council-web-ucb",
+            storageBucket: "council-web-ucb.appspot.com",
+            messagingSenderId: "879594454910",
+            appId: "1:879594454910:web:1affea62e03855b98b3d2f",
+            measurementId: "G-RVX3G4M7QX"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+
+        // Reference form elements
+        let applicationForm = document.getElementById('applicationForm');
+        let applicantNameInput = document.getElementById('applicantName');
+        let emailInput = document.getElementById('email');
+        let phoneInput = document.getElementById('phone');
+        let projectAddressInput = document.getElementById('projectAddress');
+        let projectDescriptionInput = document.getElementById('projectDescription');
+        let documentsInput = document.getElementById('documents');
+        let termsCheckbox = document.getElementById('terms');
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validateForm() {
+            let isValid = true;
+            let errorMessage = "";
+
+            if (!applicantNameInput.value) {
+                isValid = false;
+                errorMessage += "Applicant Name is required.\n";
+            }
+
+            if (!emailInput.value) {
+                isValid = false;
+                errorMessage += "Email Address is required.\n";
+            } else if (!isValidEmail(emailInput.value)) {
+                isValid = false;
+                errorMessage += "Invalid email format.\n";
+            }
+
+            if (!phoneInput.value) {
+                isValid = false;
+                errorMessage += "Phone Number is required.\n";
+            }
+
+            if (!projectAddressInput.value) {
+                isValid = false;
+                errorMessage += "Project Address is required.\n";
+            }
+
+            if (!projectDescriptionInput.value) {
+                isValid = false;
+                errorMessage += "Project Description is required.\n";
+            }
+
+            if (!termsCheckbox.checked) {
+                isValid = false;
+                errorMessage += "You must agree to the terms and conditions.\n";
+            }
+
+            if (!isValid) {
+                alert(errorMessage);
+            }
+
+            return isValid;
+        }
+
+        let submitApplicationForm = evt => {
+            evt.preventDefault();
+
+            if (!validateForm()) {
+                return;
+            }
+
+            const applicantName = applicantNameInput.value;
+            const email = emailInput.value;
+            const phone = phoneInput.value;
+            const projectAddress = projectAddressInput.value;
+            const projectDescription = projectDescriptionInput.value;
+            const files = documentsInput.files;
+
+            // Reference to the applications node in Firebase
+            const applicationsRef = ref(db, 'applications');
+
+            // Push a new application with a unique key
+            const newApplicationRef = push(applicationsRef);
+
+            // Construct the application object
+            const applicationData = {
+                applicantName: applicantName,
+                email: email,
+                phone: phone,
+                projectAddress: projectAddress,
+                projectDescription: projectDescription,
+                // Add more fields as needed
+            };
+
+            // Save data to Firebase
+            set(newApplicationRef, applicationData)
+                .then(() => {
+                    alert('Your application has been submitted successfully!');
+                    applicationForm.reset();
+                })
+                .catch(error => {
+                    console.error('Error submitting application:', error);
+                });
+        };
+
+        applicationForm.addEventListener('submit', submitApplicationForm);
+    </script>
 
 
     <script src="./scripts/script.js"></script>

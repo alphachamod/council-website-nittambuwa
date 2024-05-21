@@ -169,42 +169,40 @@
 
     <main class="ct-container">
         <div class="row">
-            <div class="col-md-6">
-                <h2>Contact Details</h2>
-                <ul class="list-group list-group-flush" id="details">
-                    <li class="list-group-item">
-                        <span class="fas fa-home me-3"></span> NMC Council, Nittambuwa, Sri Lanka
-                    </li>
-                    <li class="list-group-item">
-                        <span class="fas fa-envelope me-3"></span> <a
-                            href="mailto:info@nmcouncil.org.uk">info@nmcouncil.org.uk</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="fas fa-phone me-3"></span> <a href="tel:+4401384567890">+44 (0) 1384 567 890</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Get In Touch</h2>
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
-                </form>
-            </div>
+          <div class="col-md-6">
+            <h2>Contact Details</h2>
+            <ul class="list-group list-group-flush" id="details">
+              <li class="list-group-item">
+                <span class="fas fa-home me-3"></span> NMC Council, Nittambuwa, Sri Lanka
+              </li>
+              <li class="list-group-item">
+                <span class="fas fa-envelope me-3"></span> <a href="mailto:info@nmcouncil.org.uk">info@nmcouncil.org.uk</a>
+              </li>
+              <li class="list-group-item">
+                <span class="fas fa-phone me-3"></span> <a href="tel:+4401384567890">+44 (0) 1384 567 890</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h2>Get In Touch</h2>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+            </form>
+          </div>
         </div>
-
-    </main>
+      </main>
 
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31670.605107329604!2d80.08160663118915!3d7.1461508929074915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fd58ce1afe45%3A0x593380ee3025df5e!2sNittambuwa%2C%20Sri%20Lanka!5e0!3m2!1sen!2suk!4v1716215963850!5m2!1sen!2suk"
@@ -319,7 +317,99 @@
         </div>
     </footer>
 
+   <!-- Firebase and Bootstrap JS -->
+   <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
 
+    const firebaseConfig = {
+      apiKey: "AIzaSyBfgufdNoDwD0Byn-fRTRI56ndKs8q_yA8",
+      authDomain: "council-web-ucb.firebaseapp.com",
+      projectId: "council-web-ucb",
+      storageBucket: "council-web-ucb.appspot.com",
+      messagingSenderId: "879594454910",
+      appId: "1:879594454910:web:1affea62e03855b98b3d2f",
+      measurementId: "G-RVX3G4M7QX"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getDatabase();
+
+    // Reference form elements
+    let contactForm = document.getElementById('contactForm');
+    let nameInput = document.getElementById('name');
+    let emailInput = document.getElementById('email');
+    let messageInput = document.getElementById('message');
+
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    function validateForm() {
+      let isValid = true;
+      let errorMessage = "";
+
+      if (!nameInput.value) {
+        isValid = false;
+        errorMessage += "Name is required.\n";
+      }
+
+      if (!emailInput.value) {
+        isValid = false;
+        errorMessage += "Email is required.\n";
+      } else if (!isValidEmail(emailInput.value)) {
+        isValid = false;
+        errorMessage += "Invalid email format.\n";
+      }
+
+      if (!messageInput.value) {
+        isValid = false;
+        errorMessage += "Message is required.\n";
+      }
+
+      if (!isValid) {
+        alert(errorMessage);
+      }
+
+      return isValid;
+    }
+
+    let submitContactForm = evt => {
+      evt.preventDefault();
+
+      if (!validateForm()) {
+        return;
+      }
+
+      const name = nameInput.value;
+      const email = emailInput.value;
+      const message = messageInput.value;
+
+      // Reference to the enquiries node in Firebase
+      const enquiryRef = ref(db, 'enquiries/' + encodeURIComponent(email.replace('.', '_')));
+
+      // Save data to Firebase
+      set(enquiryRef, {
+        name: name,
+        email: email,
+        message: message
+      })
+        .then(() => {
+          alert('Your message has been sent successfully!');
+          contactForm.reset();
+        })
+        .catch(error => {
+          console.error('Error sending message:', error);
+        });
+    };
+
+    contactForm.addEventListener('submit', submitContactForm);
+  </script>
 
     <script src="./scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
