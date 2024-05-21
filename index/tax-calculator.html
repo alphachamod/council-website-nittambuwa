@@ -159,72 +159,50 @@
     <!----------------------------------------------------------------------------->
     <!---------------------------------- Content  --------------------------------->
     <!----------------------------------------------------------------------------->
-    <section class="plan-hero">
-        <h2>Planning and Building</h2>
-        <p class="lead">Find all the information you need about planning, permits, and building regulations in our
-            council area.
-        </p>
-    </section>
-    
-    <main class="plan-container" style="padding: 5%; height: 1300px;" >
-        <div class="permit-header">
-            <h1 class="display-4">Apply for Building Permits</h1>
-            <p class="lead">Submit your building permit application using the form below. Ensure all required fields are
-                completed.</p>
+
+    <main class="plan-container" style="padding: 5%; height: 750px;">
+        <div class="planning-header">
+            <h1 class="display-4">Council Tax Calculator for Tenants</h1>
+            <p class="lead">Calculate your monthly council tax based on your property details and household members.</p>
         </div>
-        <a id="application-link" href="https://firebasestorage.googleapis.com/v0/b/council-web-ucb.appspot.com/o/Building%20Division%20Permit%20Application.pdf?alt=media&token=5d2a1cc4-46b8-46d2-a610-b4d286c1983a" >Download the application here</a>
-        <div class="permit-form-section" style="padding-left: 200px; padding-right: 200px;">
-            <h2 class="section-title">Application Form</h2> 
-            <div class="card permit-card">
-                <div class="card-header permit-card-header">Building Permit Application Form</div>
-                <div class="card-body">
-                    <form>
+
+        <div class="calc-content" style="padding-left: 200px; padding-right: 200px;">
+            <div class="card calc-card">
+                <div class="card-header calc-card-header">Tax Calculation Form</div>
+                <div class="card-body calc-card-body">
+                    <form id="taxForm">
                         <div class="mb-3">
-                            <label for="applicationType" class="form-label">Application Type</label>
-                            <select class="form-select" id="applicationType" required>
-                                <option value="">Select Application Type</option>
-                                <option value="New Construction">New Construction</option>
-                                <option value="Renovation">Renovation</option>
-                                <option value="Demolition">Demolition</option>
-                                <option value="Addition">Addition</option>
-                                <!-- Add more options as needed -->
+                            <label for="numRooms" class="form-label">Number of Rooms</label>
+                            <input type="number" class="form-control" id="numRooms" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numMembers" class="form-label">Number of Household Members</label>
+                            <input type="number" class="form-control" id="numMembers" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="taxBand" class="form-label">Council Tax Band</label>
+                            <select class="form-select" id="taxBand" required>
+                                <option value="">Select Tax Band</option>
+                                <option value="A">Band A</option>
+                                <option value="B">Band B</option>
+                                <option value="C">Band C</option>
+                                <option value="D">Band D</option>
+                                <option value="E">Band E</option>
+                                <option value="F">Band F</option>
+                                <option value="G">Band G</option>
+                                <option value="H">Band H</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="applicantName" class="form-label">Applicant Name</label>
-                            <input type="text" class="form-control" id="applicantName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="projectAddress" class="form-label">Project Address</label>
-                            <input type="text" class="form-control" id="projectAddress" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="projectDescription" class="form-label">Project Description</label>
-                            <textarea class="form-control" id="projectDescription" rows="4" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="documents" class="form-label">Supporting Documents</label>
-                            <input type="file" class="form-control" id="documents" multiple>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" id="terms" required>
-                            <label class="form-check-label" for="terms">I agree to the <a href="#">terms and
-                                    conditions</a></label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                        <button type="button" class="btn btn-primary" onclick="calculateTax()">Calculate Tax</button>
                     </form>
+                    <div id="result" class="mt-4" style="display:none;">
+                        <h5>Estimated Monthly Council Tax: £<span id="taxAmount"></span></h5>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
     <!----------------------------------------------------------------------------->
     <!----------------------------------END Content  --------------------------------->
     <!----------------------------------------------------------------------------->
@@ -331,9 +309,42 @@
         </div>
     </footer>
 
+    <script>
+        function calculateTax() {
+            const numRooms = document.getElementById('numRooms').value;
+            const numMembers = document.getElementById('numMembers').value;
+            const taxBand = document.getElementById('taxBand').value;
 
+            if (!numRooms || !numMembers || !taxBand) {
+                alert('Please fill in all fields.');
+                return;
+            }
 
-    <script src="./scripts/script.js"></script>
+            // Placeholder rates for different tax bands
+            const baseRates = {
+                A: 500,
+                B: 600,
+                C: 700,
+                D: 800,
+                E: 900,
+                F: 1000,
+                G: 1100,
+                H: 1200
+            };
+
+            // Example adjustment factors based on number of rooms and household members
+            const roomFactor = numRooms * 50;
+            const memberFactor = numMembers * 25;
+
+            const baseRate = baseRates[taxBand];
+            const monthlyRate = ((baseRate + roomFactor + memberFactor) / 12).toFixed(2);
+
+            document.getElementById('taxAmount').textContent = monthlyRate;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+
+    <script src="../scripts/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
